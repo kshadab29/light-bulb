@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Bulb</title>
+    <style>
+        img{
+            width: 450px;
+            margin-left: 30%;
+        }
+        .btn{
+           margin-left: 43%;
+           padding: 25px;
+           color: #fff;
+           background-color: green;
+        }
+    </style>
+</head>
+<body style="background-color: black;">
+   <div class="container">
+    <img id="img" src="img/bulb-off.jpg" alt="">
+    <button id="Btn" class="btn">Turn on</button>
+</div>
+
+<script>
+let bulbImg = document.getElementById("img")
+let button = document.getElementById("Btn")
+
+button.addEventListener("click", togglebulb)
+
+function togglebulb(e){
+    if(button.textContent.includes('on')){
+        bulbImg.src = "img/bulb-on.jpg"
+        button.textContent = "Turn off";
+    }
+    else{
+        bulbImg.src = "img/bulb-off.jpg"
+        button.textContent = "Turn on";
+    }
+}
+</script>
+</body>
+</html>
